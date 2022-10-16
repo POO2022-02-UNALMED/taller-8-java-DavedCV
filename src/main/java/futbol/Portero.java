@@ -16,15 +16,9 @@ public class Portero extends Futbolista {
     }
 
     @Override
-    public int compareTo(Futbolista futbolista) {
-        return Math.abs(this.golesRecibidos - ((Portero) futbolista).golesRecibidos);
-    }
-
-    @Override
     public String toString() {
-        return "El futbolista \"+<" + getNombre() +">+\" tiene \"+<" + getEdad() + ">+\", y juega de \"+<" +
-                getPosicion() + ">+\" con el dorsal \"+<" + dorsal + ">+\". Le han marcado \"+<" + golesRecibidos +
-                ">+\"";
+        return "El futbolista " + getNombre() + " tiene " + getEdad() +
+                ", y juega de "  + getPosicion() +  " con el dorsal " + dorsal + ". Le han marcado " + golesRecibidos;
     }
 
     public short getGolesRecibidos() {
@@ -41,5 +35,10 @@ public class Portero extends Futbolista {
 
     public void setDorsal(byte dorsal) {
         this.dorsal = dorsal;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        return Math.abs(this.golesRecibidos - ((Portero) o).golesRecibidos);
     }
 }
