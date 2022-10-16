@@ -1,6 +1,4 @@
-package futbol;
-
-import futbol.Futbolista;
+package main.java.futbol;
 
 public class Jugador extends Futbolista {
     public short golesMarcados;

@@ -1,4 +1,4 @@
-package futbol;
+package main.java.futbol;
 
 public class Portero extends Futbolista {
     public short golesRecibidos;
